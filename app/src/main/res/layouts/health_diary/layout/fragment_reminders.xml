@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.healthdiary.components.RemindersFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        tools:context=".ui.healthdiary.reminders.RemindersFragment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:clickable="true"
+                android:onClick="@{fragment::backStack}"
+                android:src="@drawable/back" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingHorizontal="15dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Напоминания"
+                    android:textColor="@color/teal_700"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+            <ScrollView
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/title_layout"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="2dp"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Records"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:clickable="true"
+                android:layout_below="@+id/my_recycler_view"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/button_plus"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="@{fragment::add}"
+                android:layout_marginBottom="40dp"/>
+        </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

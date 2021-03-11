@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.home.lpu.LPUDetailedFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.lpu.LPUDetailedFragment"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:id="@+id/title_layout"
+        android:paddingHorizontal="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageButton
+            android:onClick="@{fragment::backstack}"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:src="@drawable/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="15dp"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="name of LPU item"
+            />
+    </LinearLayout>
+
+    <fragment
+        android:layout_marginTop="15dp"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="215dp">
+    </fragment>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingHorizontal="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="651dp">
+
+        <ImageButton
+            android:layout_marginTop="14sp"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/heart"/>
+
+        <LinearLayout
+            android:layout_marginTop="14sp"
+            android:id="@+id/stars"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_marginHorizontal="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/favoritesstar_0"
+                />
+            <ImageButton
+                android:layout_marginHorizontal="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/favoritesstar_0"
+                />
+            <ImageButton
+                android:layout_marginHorizontal="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/favoritesstar_0"
+                />
+            <ImageButton
+                android:layout_marginHorizontal="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/favoritesstar_0"
+                />
+            <ImageButton
+                android:layout_marginHorizontal="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/favoritesstar_0"
+                />
+            <TextView
+                android:layout_marginHorizontal="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:hint="4.8"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/stars"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:hint="ГБУЗ Поликлиника кожных заболеваний"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/name"
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:hint="Оказывает высококачественную медицинскую помощь"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/description"
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:hint="г. Горно-Алтайск, ул. Мира 1"/>
+
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/city"
+            android:id="@+id/schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:hint="График раюоты: Пн-Пт 9:00-18:00"/>
+
+        <TableLayout
+            android:id="@+id/date"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:textSize="14sp"
+                    android:text="email"/>
+                <TextView
+                    android:textSize="14sp"
+                    android:hint="example@mail.ru"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="14sp"
+                    android:text="тел"/>
+                <TextView
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:hint="8(800)2500550"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:textSize="14sp"
+                    android:text="веб-сайт"/>
+                <TextView
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:hint="polkhozab.ru"/>
+
+            </TableRow>
+
+        </TableLayout>
+        
+        <Button
+            android:onClick="@{fragment::toReview}"
+            android:textAllCaps="false"
+            android:paddingTop="0dp"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="15sp"
+            android:text="Добавить отзыв"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/date"
+            android:id="@+id/button"
+            android:layout_width="205dp"
+            android:layout_height="33dp"
+            android:background="@drawable/button_green"/>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/button"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+        <TextView
+            android:text="Отзывы"
+            android:layout_below="@+id/line"
+            android:id="@+id/rewiew"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/rewiew"
+            android:id="@+id/recycler_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

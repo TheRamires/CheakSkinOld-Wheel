@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cheakskin.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_LPUDocumentsFrag"
+            app:destination="@id/LPUDocumentsFrag" />
+        <action
+            android:id="@+id/action_navigation_home_to_LPUConteinerFrag"
+            app:destination="@id/LPUConteinerFrag" />
+        <action
+            android:id="@+id/action_navigation_home_to_LPUDetailedFragment"
+            app:destination="@id/LPUDetailedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_food_diary"
+        android:name="com.example.cheakskin.ui.fooddiary.FoodDiaryFragment"
+        android:label="@string/title_food_diary"
+        tools:layout="@layout/fragment_food_diary" >
+        <action
+            android:id="@+id/action_navigation_food_diary_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <action
+            android:id="@+id/action_navigation_food_diary_to_redactFoodFragment"
+            app:destination="@id/redactFoodFragment" />
+        <action
+            android:id="@+id/action_navigation_food_diary_to_searchFoodFragment"
+            app:destination="@id/searchFoodFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_health_diary"
+        android:name="com.example.cheakskin.ui.healthdiary.HealthDiaryFragment"
+        android:label="@string/title_health_diary"
+        tools:layout="@layout/fragment_health_diary" >
+        <action
+            android:id="@+id/action_navigation_health_diary_to_stateFragment"
+            app:destination="@id/stateFragment" />
+        <action
+            android:id="@+id/action_navigation_health_diary_to_treatmentFragment"
+            app:destination="@id/treatmentFragment" />
+        <action
+            android:id="@+id/action_navigation_health_diary_to_ratingFragment"
+            app:destination="@id/ratingFragment" />
+        <action
+            android:id="@+id/action_navigation_health_diary_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <action
+            android:id="@+id/action_navigation_health_diary_to_affectedAreasFragment"
+            app:destination="@id/affectedAreasFragment" />
+        <action
+            android:id="@+id/action_navigation_health_diary_to_remindersFragment3"
+            app:destination="@id/remindersFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.cheakskin.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/news_fragment" />
+    <fragment
+        android:id="@+id/navigation_tests"
+        android:name="com.example.cheakskin.ui.tests.TestsFragment"
+        android:label="@string/title_tests"
+        tools:layout="@layout/tests_fragment" />
+    <fragment
+        android:id="@+id/LPUDocumentsFrag"
+        android:name="com.example.cheakskin.ui.home.LPUDocumentsFrag"
+        android:label="LPUDocumentsFrag" />
+    <fragment
+        android:id="@+id/LPUConteinerFrag"
+        android:name="com.example.cheakskin.ui.home.lpu.LPUConteinerFrag"
+        android:label="LPUConteinerFrag" >
+        <action
+            android:id="@+id/action_LPUConteinerFrag_to_LPUDetailedFragment"
+            app:destination="@id/LPUDetailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LPUDetailedFragment"
+        android:name="com.example.cheakskin.ui.home.lpu.LPUDetailedFragment"
+        android:label="LPUDetailedFragment" >
+        <action
+            android:id="@+id/action_LPUDetailedFragment_to_LPUReviewFragment"
+            app:destination="@id/LPUReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LPUReviewFragment"
+        android:name="com.example.cheakskin.ui.home.lpu.LPUReviewFragment"
+        android:label="LPUReviewFragment" />
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.cheakskin.ui.fooddiary.components.AddFoodFragment"
+        android:label="AddFoodFragment" />
+    <fragment
+        android:id="@+id/redactFoodFragment"
+        android:name="com.example.cheakskin.ui.fooddiary.components.RedactFoodFragment"
+        android:label="RedactFoodFragment" />
+    <fragment
+        android:id="@+id/searchFoodFragment"
+        android:name="com.example.cheakskin.ui.fooddiary.components.SearchFoodFragment"
+        android:label="SearchFoodFragment" />
+    <fragment
+        android:id="@+id/stateFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.StateFragment"
+        android:label="StateFragment" />
+    <fragment
+        android:id="@+id/treatmentFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.TreatmentFragment"
+        android:label="TreatmentFragment" >
+        <action
+            android:id="@+id/action_treatmentFragment_to_treatmentRedactFragment"
+            app:destination="@id/treatmentRedactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treatmentRedactFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.TreatmentRedactFragment"
+        android:label="TreatmentRedactFragment" />
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.RatingFragment"
+        android:label="RatingFragment" />
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.CommentFragment"
+        android:label="CommentFragment" />
+    <fragment
+        android:id="@+id/affectedAreasFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.AffectedAreasFragment"
+        android:label="AffectedAreasFragment" >
+        <action
+            android:id="@+id/action_affectedAreasFragment_to_affectedRedactFragment"
+            app:destination="@id/affectedRedactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/affectedRedactFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.AffectedRedactFragment"
+        android:label="AffectedRedactFragment" />
+    <fragment
+        android:id="@+id/remindersAddFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.RemindersAddFragment"
+        android:label="RemindersAddFragment" />
+    <fragment
+        android:id="@+id/remindersFragment3"
+        android:name="com.example.cheakskin.ui.healthdiary.components.RemindersFragment"
+        android:label="RemindersFragment" >
+        <action
+            android:id="@+id/action_remindersFragment3_to_remindersAddFragment"
+            app:destination="@id/remindersAddFragment" />
+        <action
+            android:id="@+id/action_remindersFragment3_to_reminderRedactFragment"
+            app:destination="@id/reminderRedactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderRedactFragment"
+        android:name="com.example.cheakskin.ui.healthdiary.components.ReminderRedactFragment"
+        android:label="fragment_reminder_redact"
+        tools:layout="@layout/fragment_reminder_redact" />
+</navigation>

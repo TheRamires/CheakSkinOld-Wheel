@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.fooddiary.components.SearchFoodFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fooddiary.components.SearchFoodFragment"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:id="@+id/title_layout"
+        android:paddingHorizontal="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageButton
+            android:onClick="@{fragment::backStack}"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:src="@drawable/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title"
+                android:layout_centerVertical="true"
+                android:textColor="@color/teal_700"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Питание"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingHorizontal="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:paddingHorizontal="30dp"
+            android:inputType="textNoSuggestions"
+            android:textSize="14sp"
+            android:textColorHint="@color/black"
+            android:hint="Введите запрос"
+            android:layout_marginTop="28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="332dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_corner"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

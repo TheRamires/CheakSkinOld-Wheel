@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.home.lpu.LPUListFrag" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.lpu.LPUListFrag">
+
+    <EditText
+        android:hint="Введите название ЛПУ, город или район"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:paddingHorizontal="30dp"
+        android:background="@drawable/edit_text_corner"
+        android:inputType="textNoSuggestions"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingHorizontal="15dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        />
+
+
+</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

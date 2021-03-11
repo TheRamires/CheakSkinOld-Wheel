@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.healthdiary.components.Body" />
+        <variable
+            name="isBack"
+            type="java.lang.Boolean"/>
+    </data>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.healthdiary.components.Body">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:onClick="@{fragment::rotate}"
+        style="@style/Buttonise"
+        android:textSize="15sp"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/teal_700"
+        android:background="@drawable/button_rotate"
+        android:text="Повернуть ⟲"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        />
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:src="@{isBack ? @drawable/body1 :@drawable/body2}"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+</layout>

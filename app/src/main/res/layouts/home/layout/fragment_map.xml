@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.cheakskin.ui.home.lpu.MapFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.lpu.MapFragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </fragment>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/lpu_item">
+        <fragment
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/map_lpu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.cheakskin.ui.home.components.LPUFragment"
+            />
+
+    </FrameLayout>
+
+</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
